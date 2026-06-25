@@ -249,6 +249,19 @@ function initAllFeatures() {
     }
     typeWriter();
   }
+
+  // =========================
+  // VIDEO CONTROLS PLACEHOLDER
+  // =========================
+  const promoVideo = document.getElementById('quixoticPromoVideo');
+  if (promoVideo) {
+    const source = promoVideo.querySelector('source');
+    const placeholder = document.getElementById('videoPlaceholder');
+    if (source && source.getAttribute('src').trim() !== "") {
+      promoVideo.style.display = 'block';
+      if (placeholder) placeholder.style.display = 'none';
+    }
+  }
 }
 
 // =========================

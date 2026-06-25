@@ -1,53 +1,52 @@
 /* ===== EXPERIENCE SECTION ===== */
 
-/* Timeline layout */
-.experience-timeline {
-  position: relative;
+/* Card Grid styling for scrollable experience */
+.card-grid {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  overflow-x: auto;
   gap: 28px;
+  padding: 20px 10px 30px 10px;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
 }
 
-.experience-timeline::before {
-  content: '';
-  position: absolute;
-  left: 38px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: linear-gradient(to bottom, var(--primary), var(--accent), transparent);
-  border-radius: 2px;
+/* Custom Scrollbar for premium look */
+.card-grid::-webkit-scrollbar {
+  height: 8px;
+}
+
+.card-grid::-webkit-scrollbar-track {
+  background: rgba(124, 58, 237, 0.05);
+  border-radius: 10px;
+}
+
+.card-grid::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, var(--primary), var(--accent));
+  border-radius: 10px;
 }
 
 /* Card */
 .card {
+  flex: 0 0 350px;
+  scroll-snap-align: start;
   background: white;
-  padding: 32px 36px 32px 90px;
+  padding: 32px;
   border-radius: var(--radius-lg);
   border: 1px solid var(--border);
   box-shadow: var(--shadow-sm);
   transition: var(--transition);
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card:hover {
-  transform: translateX(8px);
+  transform: translateY(-8px);
   box-shadow: var(--shadow-purple);
   border-color: rgba(124, 58, 237, 0.22);
-}
-
-/* Timeline dot */
-.card::before {
-  content: '';
-  position: absolute;
-  left: 22px;
-  top: 36px;
-  width: 32px;
-  height: 32px;
-  background: var(--gradient-primary);
-  border-radius: 50%;
-  box-shadow: 0 0 0 5px white, 0 0 0 7px rgba(124, 58, 237, 0.2);
-  z-index: 1;
 }
 
 .card-company {
@@ -66,11 +65,38 @@
   margin-bottom: 12px;
 }
 
-.card .card-desc {
-  font-size: 15px;
-  line-height: 1.7;
+/* Scrollable Experience Points Container */
+.experience-points-container {
+  margin: 15px 0 25px 0;
+  max-height: 150px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+.experience-points-container::-webkit-scrollbar {
+  width: 4px;
+}
+
+.experience-points-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.experience-points-container::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+.experience-points {
+  padding-left: 18px;
+  margin: 0;
+  list-style-type: disc;
+}
+
+.experience-points li {
+  font-size: 14px;
+  line-height: 1.6;
   color: var(--text-secondary);
-  margin-bottom: 20px;
+  margin-bottom: 8px;
 }
 
 .card span {
@@ -84,23 +110,5 @@
   font-size: 13px;
   font-weight: 600;
   border: 1px solid var(--border);
-}
-
-/* Fallback grid for old .card-grid markup */
-.card-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-  position: relative;
-}
-
-.card-grid::before {
-  content: '';
-  position: absolute;
-  left: 38px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: linear-gradient(to bottom, var(--primary), var(--accent), transparent);
-  border-radius: 2px;
+  width: fit-content;
 }
