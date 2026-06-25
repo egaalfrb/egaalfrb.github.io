@@ -77,9 +77,8 @@
   }
 
   /* About section */
-  .about-content {
-    flex-direction: column;
-    text-align: center;
+  .about-grid {
+    grid-template-columns: 1fr;
     gap: 30px;
   }
 }
