@@ -1,0 +1,90 @@
+<section id="education">
+  <h5>PENDIDIKAN</h5>
+  <h2>Riwayat Pendidikan</h2>
+  <div class="education-grid">
+    <div class="edu-card" onclick="openModal('teluModal')">
+      <img src="assets/img/telkom-university.png" alt="Telkom University">
+      <div class="edu-content">
+        <h3>Universitas Telkom</h3>
+        <p>D3 Sistem Informasi</p>
+        <span>2022 - 2025 | IPK 3.14 / 4.00</span>
+      </div>
+    </div>
+    <div class="edu-card" onclick="openModal('smkModal')">
+      <img src="assets/img/smk-telkom.png" alt="SMK Telkom Jakarta">
+      <div class="edu-content">
+        <h3>SMK Telkom Jakarta</h3>
+        <p>Teknik Jaringan Akses Telekomunikasi</p>
+        <span>2019 - 2022</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modals -->
+<div class="modal" id="teluModal">
+  <div class="modal-box">
+    <span class="close" onclick="closeModal('teluModal')">&times;</span>
+    <img src="assets/img/telkom-university.png" alt="Telkom University">
+    <h2>Universitas Telkom</h2>
+    <p>Program Studi D3 Sistem Informasi dengan fokus pada pengembangan website, mobile application, database, dan digitalisasi proses bisnis.</p>
+    <h3>Kegiatan</h3>
+    <ul>
+      <li>Magang di PT Graha Sarana Duta (Telkom Property)</li>
+      <li>Liaison Officer Diskominfo Halmahera Timur</li>
+      <li>Mengembangkan berbagai project website dan mobile application</li>
+    </ul>
+    <h3>Prestasi</h3>
+    <ul>
+      <li>Penerima Beasiswa Yayasan Pendidikan Telkom OPES selama 3 tahun</li>
+      <li>Lulus dengan IPK 3.14 / 4.00</li>
+    </ul>
+  </div>
+</div>
+
+<div class="modal" id="smkModal">
+  <div class="modal-box smk-modal-box">
+    <span class="close" onclick="closeModal('smkModal')">&times;</span>
+    <img src="assets/img/smk-telkom.png" alt="SMK Telkom Jakarta" style="max-width: 200px; max-height: 150px; display: block; margin: 0 auto 30px; object-fit: contain;">
+    <h2>SMK Telkom Jakarta</h2>
+    <p>Program Teknik Jaringan Akses Telekomunikasi dengan fokus pada jaringan komputer dan perangkat telekomunikasi.</p>
+    <h3>Organisasi</h3>
+    <ul>
+      <li>Anggota Majelis Perwakilan Kelas (MPK)</li>
+      <li>Ketua Komisi MPK</li>
+    </ul>
+    <h3>Prestasi</h3>
+    <ul>
+      <li>Peringkat 2 Kelas XI</li>
+      <li>Peringkat 1 Kelas XII</li>
+    </ul>
+
+    <h3 style="margin: 30px 0 15px;">Galeri Dokumentasi</h3>
+    <div class="project-gallery" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px;">
+      <div class="gallery-item" data-gallery="smk" onclick="openLightbox(0, 'smk')">
+        <img src="assets/img/smktelkom1.jpeg" alt="Organisasi MPK">
+        <div class="gallery-caption">Organisasi MPK</div>
+      </div>
+      <div class="gallery-item" data-gallery="smk" onclick="openLightbox(1, 'smk')">
+        <img src="assets/img/smktelkom2.jpeg" alt="PKL PT INTI">
+        <div class="gallery-caption">PKL PT INTI</div>
+      </div>
+      <div class="gallery-item" data-gallery="smk" onclick="openLightbox(2, 'smk')">
+        <img src="assets/img/smktelkom3.jpeg" alt="Organisasi MPK">
+        <div class="gallery-caption">Organisasi MPK</div>
+      </div>
+      <div class="gallery-item" data-gallery="smk" onclick="openLightbox(3, 'smk')">
+        <img src="assets/img/smktelkom4.jpeg" alt="Organisasi MPK">
+        <div class="gallery-caption">Organisasi MPK</div>
+      </div>
+      <div class="gallery-item" data-gallery="smk" onclick="openLightbox(4, 'smk')">
+        <img src="assets/img/smktelkom5.jpeg" alt="Organisasi MPK">
+        <div class="gallery-caption">Organisasi MPK</div>
+      </div>
+      <div class="gallery-item" data-gallery="smk" onclick="openLightbox(5, 'smk')">
+        <img src="assets/img/smktelkom6.jpeg" alt="Organisasi MPK">
+        <div class="gallery-caption">Organisasi MPK</div>
+      </div>
+    </div>
+  </div>
+</div>

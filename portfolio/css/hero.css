@@ -1,0 +1,323 @@
+/* ===== HERO SECTION ===== */
+.hero {
+  min-height: 100vh;
+  padding-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative blobs */
+.hero::before {
+  content: '';
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.12) 0%, transparent 70%);
+  top: -100px;
+  left: -200px;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.10) 0%, transparent 70%);
+  bottom: 0;
+  right: 100px;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.left, .right { flex: 1; }
+
+/* Greeting badge */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  padding: 8px 20px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-sm);
+  animation: fadeInDown 0.6s ease both;
+}
+
+.hero-badge span {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.badge-dot {
+  width: 8px;
+  height: 8px;
+  background: #22c55e;
+  border-radius: 50%;
+  position: relative;
+}
+
+.badge-dot::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  background: rgba(34, 197, 94, 0.3);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.4); opacity: 0.2; }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* Hero heading */
+.left h4 {
+  color: var(--primary);
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  animation: fadeInUp 0.6s 0.1s ease both;
+}
+
+.left h1 {
+  font-size: 58px;
+  margin: 0 0 16px;
+  line-height: 1.1;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -1.5px;
+  animation: fadeInUp 0.7s 0.2s ease both;
+}
+
+.left h1 .name-highlight {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.left h3 {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  min-height: 30px;
+  animation: fadeInUp 0.7s 0.3s ease both;
+}
+
+/* Typing cursor */
+.left h3::after {
+  content: '|';
+  animation: blink 0.8s step-end infinite;
+  color: var(--primary);
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.left p {
+  margin: 0 0 38px;
+  max-width: 520px;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  animation: fadeInUp 0.7s 0.4s ease both;
+}
+
+/* Hero buttons */
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+  animation: fadeInUp 0.7s 0.5s ease both;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 30px;
+  background: var(--gradient-primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 15px;
+  border: 2px solid transparent;
+  transition: var(--transition);
+  box-shadow: 0 6px 20px var(--primary-glow);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.btn:hover::before { opacity: 1; }
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 35px var(--primary-glow);
+}
+
+.btn:active { transform: translateY(-1px); }
+
+.btn-outline {
+  background: white;
+  color: var(--primary);
+  border: 2px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-outline:hover {
+  background: var(--primary-ultra-light);
+  border-color: var(--primary);
+  box-shadow: 0 8px 24px var(--primary-glow);
+}
+
+/* ===== HERO RIGHT / PROFILE ===== */
+.right {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  animation: fadeInRight 0.8s 0.3s ease both;
+}
+
+.profile-wrapper {
+  position: relative;
+  width: 420px;
+  height: 460px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+/* Animated gradient ring */
+.circle {
+  width: 340px;
+  height: 340px;
+  background: conic-gradient(
+    from 0deg,
+    var(--primary) 0%,
+    var(--accent) 40%,
+    var(--primary-light) 70%,
+    var(--primary) 100%
+  );
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -58%);
+  z-index: 1;
+  animation: spinGradient 6s linear infinite;
+  padding: 5px;
+}
+
+.circle::after {
+  content: '';
+  position: absolute;
+  inset: 8px;
+  background: var(--bg);
+  border-radius: 50%;
+}
+
+@keyframes spinGradient {
+  from { transform: translate(-50%, -58%) rotate(0deg); }
+  to   { transform: translate(-50%, -58%) rotate(360deg); }
+}
+
+/* Floating stats */
+.hero-stat {
+  position: absolute;
+  background: white;
+  border-radius: var(--radius-md);
+  padding: 14px 20px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap;
+  animation: floatBob 3s ease-in-out infinite;
+}
+
+.hero-stat:nth-child(3) {
+  top: 40px;
+  left: -30px;
+  animation-delay: 0s;
+}
+
+.hero-stat:nth-child(4) {
+  bottom: 80px;
+  left: -50px;
+  animation-delay: 1.2s;
+}
+
+@keyframes floatBob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.hero-stat .stat-icon {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.hero-stat .stat-text strong {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.hero-stat .stat-text small {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.right img {
+  width: 380px;
+  height: auto;
+  object-fit: contain;
+  position: relative;
+  z-index: 2;
+  display: block;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.15));
+}
