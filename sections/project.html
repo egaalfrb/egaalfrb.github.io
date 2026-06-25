@@ -2,17 +2,11 @@
   <h5>PROJECT</h5>
   <h2>Pengalaman & Project</h2>
   <div class="project-grid">
-    <div class="project-card" onclick="window.open('https://gamy-sack.surge.sh', '_blank')" style="cursor: pointer;">
+    <div class="project-card" onclick="openModal('telproModal')" style="cursor: pointer;">
       <img src="assets/img/telkom-property.jpg" alt="Telkom Property">
       <div class="project-content">
         <h3>Telkom Property Internship Project</h3>
-        <p style="margin-bottom: 20px;">Integrasi website ESS ke aplikasi mobile dan implementasi fake GPS detection. Coba demo aplikasi pendeteksi dan pencegahan Fake GPS.</p>
-        <a href="https://gamy-sack.surge.sh" target="_blank" class="project-btn-demo" onclick="event.stopPropagation();">
-          <svg style="width: 16px; height: 16px; fill: currentColor; vertical-align: middle; margin-right: 4px;" viewBox="0 0 24 24">
-            <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
-          </svg>
-          Coba Demo Anti-Fake GPS
-        </a>
+        <p>Integrasi website ESS ke aplikasi mobile dan implementasi fake GPS detection (Klik untuk detail).</p>
       </div>
     </div>
     
@@ -115,6 +109,39 @@
       <div class="gallery-item" data-gallery="quixotic" onclick="openLightbox(6, 'quixotic')">
         <img src="assets/img/WhatsApp%20Image%202026-06-21%20at%2023.04.54%20(2).jpeg" alt="Model Photoshoot 7">
       </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Telkom Property -->
+<div class="modal" id="telproModal">
+  <div class="modal-box">
+    <span class="close" onclick="closeModal('telproModal')">&times;</span>
+    <img src="assets/img/telkom-property.jpg" alt="Telkom Property Banner" style="border-radius: 20px; width: 100%; max-height: 350px; object-fit: cover; margin-bottom: 30px;">
+    <h2>Telkom Property Internship Project</h2>
+    <p style="color: #6b7280; font-size: 16px; margin: 15px 0 25px; line-height: 1.6;">
+      Project ini dikerjakan selama masa magang di PT Graha Sarana Duta (Telkom Property) pada divisi IT & Digitization. Fokus utama dari project ini adalah mengintegrasikan website ESS absensi ke aplikasi mobile dan mengimplementasikan sistem deteksi Fake GPS untuk meningkatkan keandalan absensi.
+    </p>
+    
+    <h3 style="margin: 20px 0 10px;">Fitur & Kontribusi Utama</h3>
+    <ul style="padding-left: 20px; margin-bottom: 30px; color: #4b5563; line-height: 1.8;">
+      <li style="margin-bottom: 8px;"><strong>Integrasi Mobile:</strong> Mengintegrasikan website Employee Self Service (ESS) absensi ke dalam aplikasi mobile (WebView).</li>
+      <li style="margin-bottom: 8px;"><strong>Fake GPS Detection:</strong> Merancang dan mengimplementasikan sistem deteksi aplikasi mock location/fake GPS dan location permission pada modul absensi.</li>
+      <li style="margin-bottom: 8px;"><strong>Mekanisme Validasi:</strong> Mengatur mekanisme validasi lokasi saat melakukan login/absensi untuk menjaga keaslian data koordinat.</li>
+      <li style="margin-bottom: 8px;"><strong>Keamanan Data:</strong> Mengelola keamanan dan pembatasan akses data absensi sesuai batasan untuk karyawan magang.</li>
+    </ul>
+
+    <h3 style="margin: 25px 0 15px;">Uji Coba Demo Aplikasi</h3>
+    <p style="color: #6b7280; font-size: 15px; margin-bottom: 20px; line-height: 1.6;">
+      Anda dapat menguji fungsionalitas pendeteksian fake GPS secara langsung melalui demo interaktif berikut:
+    </p>
+    <div style="text-align: center; margin-bottom: 10px;">
+      <a href="https://gamy-sack.surge.sh" target="_blank" class="project-btn-demo" onclick="event.stopPropagation();">
+        <svg style="width: 16px; height: 16px; fill: currentColor; vertical-align: middle; margin-right: 6px;" viewBox="0 0 24 24">
+          <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+        </svg>
+        Coba Demo Anti-Fake GPS
+      </a>
     </div>
   </div>
 </div>
