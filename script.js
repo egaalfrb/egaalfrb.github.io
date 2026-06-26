@@ -81,14 +81,19 @@ function initAllFeatures() {
 
   window.addEventListener("scroll", () => {
     let current = "";
-    const allSections = document.querySelectorAll("section");
+    const allSections = document.querySelectorAll(".section-container");
 
     allSections.forEach(section => {
-      const sectionTop = section.offsetTop - 150;
-      if (window.scrollY >= sectionTop) {
+      // Use offsetTop of the container
+      const sectionTop = section.offsetTop - 200; 
+      const sectionHeight = section.offsetHeight;
+      if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
         current = section.getAttribute("id");
       }
     });
+
+    // Fallback if at the very top
+    if (window.scrollY < 50) current = "home";
 
     navLinks.forEach(link => {
       link.classList.remove("active");
