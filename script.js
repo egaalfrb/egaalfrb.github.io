@@ -241,7 +241,7 @@ function initAllFeatures() {
   // =========================
   const typingElement = document.querySelector(".left h3");
   if (typingElement) {
-    const text = "D3 Sistem Informasi | AI Prompt Engineer (Self-Proclaimed) 🤖";
+    const text = "D3 Sistem Informasi | IT & Digital Enthusiast";
     let i = 0;
     typingElement.innerHTML = "";
 
