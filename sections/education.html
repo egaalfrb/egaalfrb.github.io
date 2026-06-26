@@ -25,34 +25,52 @@
 <div class="modal" id="teluModal">
   <div class="modal-box">
     <span class="close" onclick="closeModal('teluModal')">&times;</span>
-    <img src="assets/img/telkom-university-new.png" alt="Telkom University" style="max-width: 200px; max-height: 150px; display: block; margin: 0 auto 30px; object-fit: contain;">
+    <img src="assets/img/telkom-university-new.png" alt="Telkom University" style="max-width: 200px; max-height: 150px; display: block; margin: 0 auto 30px; object-fit: contain;" class="edu-modal-logo">
     <h2>Universitas Telkom</h2>
     <p>Program Studi D3 Sistem Informasi dengan fokus pada pengembangan website, mobile application, database, dan digitalisasi proses bisnis.</p>
-    <h3>Kegiatan</h3>
+    
+    <h3 style="margin-top: 25px;">Kegiatan & Pengalaman</h3>
     <ul>
       <li>Magang di PT Graha Sarana Duta (Telkom Property)</li>
-      <li>Liaison Officer Diskominfo Halmahera Timur</li>
+      <li>Liaison Officer (LO) Diskominfo Halmahera Timur dalam kegiatan Bimbingan Teknis (Bimtek)</li>
       <li>Mengembangkan berbagai project website dan mobile application</li>
     </ul>
+    
     <h3>Prestasi</h3>
     <ul>
       <li>Penerima Beasiswa Yayasan Pendidikan Telkom OPES selama 3 tahun</li>
       <li>Lulus dengan IPK 3.14 / 4.00</li>
     </ul>
+
+    <h3 style="margin: 30px 0 15px;">Galeri Kegiatan Bimtek Halmahera Timur</h3>
+    <div class="project-gallery" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-bottom: 30px;">
+      <div class="gallery-item" data-gallery="haltim" onclick="openLightbox(0, 'haltim')">
+        <img src="assets/img/profile.jpeg" alt="Bimtek Haltim 1">
+        <div class="gallery-caption">Kegiatan Bimtek</div>
+      </div>
+      <!-- You can add more haltim photos here if available in assets -->
+    </div>
+
+    <h3 style="margin: 25px 0 15px;">Project Kuliah (Video Presentasi)</h3>
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+      <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" src="https://www.youtube.com/embed/Bw8jSPnf4j0?si=nKCqNLgPOLtBGYml" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
   </div>
 </div>
 
 <div class="modal" id="smkModal">
   <div class="modal-box smk-modal-box">
     <span class="close" onclick="closeModal('smkModal')">&times;</span>
-    <img src="assets/img/smk-telkom.png" alt="SMK Telkom Jakarta" style="max-width: 200px; max-height: 150px; display: block; margin: 0 auto 30px; object-fit: contain;">
+    <img src="assets/img/smk-telkom.png" alt="SMK Telkom Jakarta" style="max-width: 250px; max-height: 150px; display: block; margin: 0 auto 30px; object-fit: contain; mix-blend-mode: multiply;" class="edu-modal-logo">
     <h2>SMK Telkom Jakarta</h2>
     <p>Program Teknik Jaringan Akses Telekomunikasi dengan fokus pada jaringan komputer dan perangkat telekomunikasi.</p>
-    <h3>Organisasi</h3>
+    
+    <h3 style="margin-top: 25px;">Organisasi</h3>
     <ul>
       <li>Anggota Majelis Perwakilan Kelas (MPK)</li>
       <li>Ketua Komisi MPK</li>
     </ul>
+    
     <h3>Prestasi</h3>
     <ul>
       <li>Peringkat 2 Kelas XI</li>
@@ -60,7 +78,7 @@
     </ul>
 
     <h3 style="margin: 30px 0 15px;">Galeri Dokumentasi</h3>
-    <div class="project-gallery" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px;">
+    <div class="project-gallery" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-bottom: 30px;">
       <div class="gallery-item" data-gallery="smk" onclick="openLightbox(0, 'smk')">
         <img src="assets/img/smktelkom1.jpeg" alt="Organisasi MPK">
         <div class="gallery-caption">Organisasi MPK</div>
@@ -85,6 +103,11 @@
         <img src="assets/img/smktelkom6.jpeg" alt="Organisasi MPK">
         <div class="gallery-caption">Organisasi MPK</div>
       </div>
+    </div>
+
+    <h3 style="margin: 25px 0 15px;">Project SMK (Video)</h3>
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+      <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" src="https://www.youtube.com/embed/3j5dT-Drouo?si=uwZqE98CtuL0u8A-" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
   </div>
 </div>

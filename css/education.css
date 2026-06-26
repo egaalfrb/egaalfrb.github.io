@@ -43,7 +43,6 @@
   height: 200px;
   object-fit: contain;
   padding: 10px;
-  background: linear-gradient(135deg, #f8f6ff, #eef2ff);
   border-bottom: 1px solid var(--border);
   transition: transform 0.4s ease;
   mix-blend-mode: multiply;
@@ -142,7 +141,7 @@
   to   { transform: translateY(0); opacity: 1; }
 }
 
-.modal-box img {
+.edu-modal-logo {
   max-width: 180px;
   max-height: 130px;
   display: block;
